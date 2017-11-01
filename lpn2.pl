@@ -1,6 +1,8 @@
 numeral(0).
 numeral(s(X)):-numeral(X).
 numeral(p(X)) :- numeral(X).
+numeral(-X) :- numeral(X).
+numeral(X-Y) :- numeral numeral(X), numeral(Y).
 numeral(X+Y):-numeral(X),numeral(Y).
 
 add(0,X,X).
